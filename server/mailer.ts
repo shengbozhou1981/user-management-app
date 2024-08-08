@@ -2,16 +2,16 @@
 import nodemailer from 'nodemailer';
 
 const transporter = nodemailer.createTransport({
-  service: 'Gmail',
+  service: 'hotmail',
   auth: {
-    user: 'your-email@gmail.com',
-    pass: 'your-email-password',
+    user: 'shengbozhou@hotmail.com',
+    pass: process.env.HOTMAIL_PASSWORD,
   },
 });
 
 export const sendEmail = (to: string, subject: string, text: string) => {
   const mailOptions = {
-    from: 'your-email@gmail.com',
+    from: 'shengbozhou@hotmail.com',
     to,
     subject,
     text,

@@ -8,8 +8,8 @@ import { sendEmail } from './mailer';
 
 // In-memory user storage
 const users = [
-  { id: '1', name: 'John Doe', email: 'john@example.com', password: bcrypt.hashSync('password', 8), verified: false },
-  { id: '2', name: 'Jane Doe', email: 'jane@example.com', password: bcrypt.hashSync('password', 8), verified: false },
+  { id: '1', name: 'John Doe', email: 'john@example.com', password: '123456', verified: false },
+  { id: '2', name: 'Jane Doe', email: 'jane@example.com', password: '123456', verified: false },
 ];
 
 // GraphQL schema
