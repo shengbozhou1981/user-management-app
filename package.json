@@ -12,6 +12,7 @@
     "@apollo/client": "^3.11.3",
     "bcryptjs": "^2.4.3",
     "better-sqlite3": "^11.1.2",
+    "dotenv": "^16.4.5",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2",
     "next": "14.2.5",

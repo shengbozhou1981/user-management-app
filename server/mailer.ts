@@ -1,6 +1,8 @@
 // server/mailer.ts
 import nodemailer from 'nodemailer';
 
+
+console.log('HOTMAIL_PASSWORD:', process.env.HOTMAIL_PASSWORD); 
 const transporter = nodemailer.createTransport({
   service: 'hotmail',
   auth: {
@@ -10,6 +12,7 @@ const transporter = nodemailer.createTransport({
 });
 
 export const sendEmail = (to: string, subject: string, text: string) => {
+  console.log('HOTMAIL_PASSWORD:', process.env.HOTMAIL_PASSWORD); 
   const mailOptions = {
     from: 'shengbozhou@hotmail.com',
     to,
