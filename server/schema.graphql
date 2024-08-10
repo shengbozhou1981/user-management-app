@@ -1,0 +1,27 @@
+# schema.graphql
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  verified: Boolean!
+}
+
+type AuthPayload {
+  token: String!
+  user: User!
+}
+
+type Query {
+  user(id: ID!): User
+  users: [User]
+}
+
+type Mutation {
+  login(email: String!, password: String!): AuthPayload
+  signup(name: String!, email: String!, password: String!): AuthPayload
+  verifyEmail(token: String!): Boolean
+  requestPasswordReset(email: String!): Boolean
+  resetPassword(token: String!, newPassword: String!): Boolean
+  createUser(name: String!, email: String!, password: String!): AuthPayload
+  updateUser(id: ID!, name: String, email: String, password: String): User
+}
